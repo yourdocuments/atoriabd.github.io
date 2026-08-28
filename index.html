@@ -2,34 +2,47 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anjona Ladies Tailors | দেশি থ্রি-পিস শপ</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Anjona Ladies Tailors - দেশি থ্রি-পিস, কটন থ্রি-পিস ও কাস্টম টেইলারিং শপ।">
+    <title>
+        Anjona Ladies Tailors | Premium Deshi Fashion
+    </title>
+
+    <meta
+        name="description"
+        content="Anjona Ladies Tailors - Premium Bangladeshi Three Piece & Ladies Fashion"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
 
-<!-- ==================================================
-     TOP BAR
-================================================== -->
+<!-- =====================================================
+     ANNOUNCEMENT BAR
+===================================================== -->
 
-<div class="top-bar">
+<div class="announcement">
 
-    <div class="top-inner">
+    <div class="announcement-inner">
 
         <span>
-            🇧🇩 বাংলাদেশের দেশি পোশাক
+            ✨ নতুন কালেকশন এসেছে
         </span>
 
         <span>
-            কাস্টম অর্ডার নেওয়া হয়
+            দেশি থ্রি-পিস • কাস্টম সেলাই • অর্ডার নেওয়া হয়
         </span>
+
+        <a href="#shop">
+            Shop Now →
+        </a>
 
     </div>
 
@@ -37,78 +50,109 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      HEADER
-================================================== -->
+===================================================== -->
 
-<header>
+<header class="header">
 
-    <div class="navbar">
+    <div class="header-inner">
 
 
         <!-- LOGO -->
 
-        <a href="#home" class="logo">
+        <a
+            href="#home"
+            class="brand"
+        >
 
-            <div class="logo-icon">
-                🧵
+            <div class="brand-symbol">
+                A
             </div>
 
-            <div>
-                <div class="logo-name">
-                    Anjona
-                </div>
+            <div class="brand-text">
 
-                <small>
-                    Ladies Tailors
-                </small>
+                <strong>
+                    ANJONA
+                </strong>
+
+                <span>
+                    LADIES TAILORS
+                </span>
+
             </div>
 
         </a>
 
 
 
-        <!-- SEARCH -->
+        <!-- DESKTOP NAV -->
 
-        <div class="search-box">
+        <nav class="desktop-nav">
 
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="থ্রি-পিস, কটন, ডিজাইন খুঁজুন..."
+            <a
+                href="#home"
+                class="active"
             >
+                Home
+            </a>
 
-            <button
-                type="button"
-                id="searchButton"
-            >
-                🔍
-            </button>
+            <a href="#shop">
+                Shop
+            </a>
 
-        </div>
+            <a href="#threepiece">
+                Three Piece
+            </a>
+
+            <a href="#new">
+                New Arrival
+            </a>
+
+            <a href="#custom">
+                Custom
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
 
 
 
-        <!-- HEADER ACTIONS -->
+        <!-- ACTIONS -->
 
         <div class="header-actions">
 
-            <a
-                href="#contact"
-                class="head-action"
+            <button
+                class="icon-btn"
+                id="searchBtn"
+                aria-label="Search"
             >
-                <span>☎</span>
-                <small>যোগাযোগ</small>
-            </a>
+                ⌕
+            </button>
 
 
             <button
-                class="cart-button"
-                id="cartButton"
-                type="button"
+                class="icon-btn"
+                id="cartBtn"
+                aria-label="Cart"
+            >
+                ♡
+            </button>
+
+
+            <button
+                class="cart-btn"
+                id="openCart"
             >
 
-                🛒
+                🛍
 
                 <span>
                     Cart
@@ -122,9 +166,8 @@
 
 
             <button
-                class="menu-button"
-                id="menuButton"
-                type="button"
+                class="mobile-menu-btn"
+                id="menuBtn"
             >
                 ☰
             </button>
@@ -132,46 +175,6 @@
         </div>
 
     </div>
-
-
-
-    <!-- NAVIGATION -->
-
-    <nav class="main-nav">
-
-        <div class="nav-inner">
-
-            <a href="#home">
-                হোম
-            </a>
-
-            <a href="#shop">
-                Shop
-            </a>
-
-            <a href="#threepiece">
-                থ্রি-পিস
-            </a>
-
-            <a href="#new">
-                New Arrival
-            </a>
-
-            <a href="#custom">
-                Custom Tailoring
-            </a>
-
-            <a href="#about">
-                আমাদের সম্পর্কে
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
-    </nav>
 
 
 
@@ -183,7 +186,7 @@
     >
 
         <a href="#home">
-            হোম
+            Home
         </a>
 
         <a href="#shop">
@@ -191,7 +194,7 @@
         </a>
 
         <a href="#threepiece">
-            থ্রি-পিস
+            Three Piece
         </a>
 
         <a href="#new">
@@ -216,74 +219,148 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
+     SEARCH PANEL
+===================================================== -->
+
+<div
+    class="search-panel"
+    id="searchPanel"
+>
+
+    <div class="search-panel-inner">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="থ্রি-পিস, কটন, ডিজাইন খুঁজুন..."
+        >
+
+        <button
+            id="closeSearch"
+        >
+            ✕
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
      HERO
-================================================== -->
+===================================================== -->
 
-<main id="home">
+<section
+    class="hero"
+    id="home"
+>
 
 
-<section class="hero-shop">
+    <div class="hero-left">
 
-    <div class="hero-content">
+        <div class="hero-label">
 
-        <div class="offer-tag">
-            ✨ NEW COLLECTION
+            <span>
+                NEW SEASON
+            </span>
+
+            <i></i>
+
+            <small>
+                2026 COLLECTION
+            </small>
+
         </div>
 
+
         <h1>
-            দেশি কাপড়ে
+
+            দেশি পোশাকে
+
             <br>
-            <span>আপনার নিজস্ব স্টাইল</span>
+
+            <em>
+                আপনার নিজস্ব
+            </em>
+
+            <br>
+
+            সৌন্দর্য।
+
         </h1>
 
+
         <p>
-            বাংলাদেশের সুন্দর দেশি কাপড়ের
-            থ্রি-পিস কালেকশন। আপনার পছন্দের
-            ডিজাইন ও মাপ অনুযায়ী অর্ডার করুন।
+
+            বাংলাদেশের দেশি কাপড়, আধুনিক
+            ডিজাইন এবং নিখুঁত টেইলারিং—
+            সব এক জায়গায়।
+
         </p>
 
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
 
             <a
                 href="#shop"
-                class="shop-btn"
+                class="dark-btn"
             >
-                Shop Now →
+                Explore Collection
+                <span>→</span>
             </a>
+
 
             <a
                 href="#custom"
-                class="outline-btn"
+                class="text-btn"
             >
-                Custom Order
+                Custom Tailoring
+                <span>↗</span>
             </a>
 
         </div>
 
 
-        <div class="hero-features">
+        <div class="hero-bottom">
 
             <div>
-                <strong>✓</strong>
+
+                <strong>
+                    25+
+                </strong>
+
                 <span>
-                    দেশি কাপড়
+                    Designs
                 </span>
+
             </div>
 
-            <div>
-                <strong>✓</strong>
-                <span>
-                    কাস্টম মাপ
-                </span>
-            </div>
 
             <div>
-                <strong>✓</strong>
+
+                <strong>
+                    100%
+                </strong>
+
                 <span>
-                    যত্নসহকারে তৈরি
+                    Deshi Style
                 </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    ♥
+                </strong>
+
+                <span>
+                    Handmade Care
+                </span>
+
             </div>
 
         </div>
@@ -292,25 +369,63 @@
 
 
 
-    <div class="hero-product">
+    <!-- HERO IMAGE -->
 
-        <div class="hero-round"></div>
+    <div class="hero-right">
 
-        <img
-            src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
-            alt="দেশি থ্রি-পিস"
-        >
+        <div class="hero-bg-shape"></div>
 
 
-        <div class="hero-price">
+        <div class="hero-main-image">
 
-            <small>
-                Starting From
-            </small>
+            <img
+                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1000&q=90"
+                alt="Premium Deshi Three Piece"
+            >
 
-            <strong>
-                ৳ 850
-            </strong>
+        </div>
+
+
+        <div class="hero-small-card">
+
+            <div class="small-card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=300&q=80"
+                    alt="Deshi Collection"
+                >
+
+            </div>
+
+            <div>
+
+                <small>
+                    FEATURED
+                </small>
+
+                <strong>
+                    Deshi Collection
+                </strong>
+
+                <span>
+                    From ৳850
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-round-text">
+
+            <span>
+                ANJONA
+                •
+                DESHI
+                •
+                STYLE
+                •
+            </span>
 
         </div>
 
@@ -320,115 +435,73 @@
 
 
 
-<!-- ==================================================
-     CATEGORY
-================================================== -->
+<!-- =====================================================
+     CATEGORY STRIP
+===================================================== -->
 
-<section class="categories">
+<section class="category-strip">
 
-    <div class="section-head">
+    <div class="category-item">
 
-        <div>
+        <span>
+            ✦
+        </span>
 
-            <small>
-                SHOP BY CATEGORY
-            </small>
-
-            <h2>
-                আপনার পছন্দের ক্যাটাগরি
-            </h2>
-
-        </div>
-
-        <a href="#shop">
-            View All →
-        </a>
+        <strong>
+            দেশি থ্রি-পিস
+        </strong>
 
     </div>
 
 
-    <div class="category-grid">
+    <div class="category-item">
+
+        <span>
+            ✦
+        </span>
+
+        <strong>
+            Cotton Collection
+        </strong>
+
+    </div>
 
 
-        <a
-            href="#threepiece"
-            class="category-card"
-        >
+    <div class="category-item">
 
-            <div class="category-icon">
-                👗
-            </div>
+        <span>
+            ✦
+        </span>
 
-            <strong>
-                থ্রি-পিস
-            </strong>
+        <strong>
+            Party Wear
+        </strong>
 
-            <span>
-                ২৫+ Designs
-            </span>
-
-        </a>
+    </div>
 
 
-        <a
-            href="#shop"
-            class="category-card"
-        >
+    <div class="category-item">
 
-            <div class="category-icon">
-                🌸
-            </div>
+        <span>
+            ✦
+        </span>
 
-            <strong>
-                কটন
-            </strong>
+        <strong>
+            Custom Tailoring
+        </strong>
 
-            <span>
-                Comfortable Wear
-            </span>
-
-        </a>
+    </div>
 
 
-        <a
-            href="#shop"
-            class="category-card"
-        >
+    <div class="category-item">
 
-            <div class="category-icon">
-                ✨
-            </div>
+        <span>
+            ✦
+        </span>
 
-            <strong>
-                Party Wear
-            </strong>
-
-            <span>
-                Special Collection
-            </span>
-
-        </a>
-
-
-        <a
-            href="#custom"
-            class="category-card"
-        >
-
-            <div class="category-icon">
-                🧵
-            </div>
-
-            <strong>
-                Custom Tailoring
-            </strong>
-
-            <span>
-                আপনার মাপ অনুযায়ী
-            </span>
-
-        </a>
-
+        <strong>
+            New Arrival
+        </strong>
 
     </div>
 
@@ -436,114 +509,152 @@
 
 
 
-<!-- ==================================================
-     SHOP
-================================================== -->
+<!-- =====================================================
+     SHOP SECTION
+===================================================== -->
 
 <section
-    class="shop-section"
+    class="shop"
     id="shop"
 >
 
-    <div class="section-head">
+
+    <div class="section-heading">
 
         <div>
 
-            <small>
-                OUR SHOP
-            </small>
+            <span>
+                CURATED FOR YOU
+            </span>
 
             <h2>
-                জনপ্রিয় থ্রি-পিস
+                Shop Our Collection
             </h2>
 
         </div>
 
-        <div class="sort-box">
 
-            <select id="sortProducts">
-
-                <option value="default">
-                    Sort By
-                </option>
-
-                <option value="low">
-                    Price: Low to High
-                </option>
-
-                <option value="high">
-                    Price: High to Low
-                </option>
-
-            </select>
-
-        </div>
+        <a href="#threepiece">
+            View All Collection →
+        </a>
 
     </div>
 
 
 
+    <!-- FILTER -->
+
+    <div class="shop-filter">
+
+        <button
+            class="filter active"
+            data-filter="all"
+        >
+            All
+        </button>
+
+        <button
+            class="filter"
+            data-filter="cotton"
+        >
+            Cotton
+        </button>
+
+        <button
+            class="filter"
+            data-filter="deshi"
+        >
+            Deshi
+        </button>
+
+        <button
+            class="filter"
+            data-filter="party"
+        >
+            Party Wear
+        </button>
+
+        <button
+            class="filter"
+            data-filter="new"
+        >
+            New Arrival
+        </button>
+
+    </div>
+
+
+
+    <!-- PRODUCTS -->
+
     <div
-        class="product-grid"
+        class="products"
         id="productGrid"
     >
 
 
-        <!-- PRODUCT 1 -->
+        <!-- PRODUCT -->
 
         <article
-            class="product-card"
-            data-name="কটন দেশি থ্রি পিস"
+            class="product"
+            data-category="deshi"
+            data-name="Deshi Cotton Three Piece"
             data-price="850"
         >
 
-            <div class="product-image">
+            <div class="product-photo">
 
-                <span class="discount">
-                    -15%
+                <span class="product-tag">
+                    BEST SELLER
                 </span>
 
+
                 <button
-                    class="heart"
-                    type="button"
+                    class="wishlist"
                 >
                     ♡
                 </button>
 
+
                 <img
-                    src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85"
-                    alt="কটন দেশি থ্রি-পিস"
+                    src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=90"
+                    alt="Deshi Cotton Three Piece"
                     loading="lazy"
                 >
+
+
+                <div class="quick-view">
+                    Quick View
+                </div>
 
             </div>
 
 
-            <div class="product-info">
+            <div class="product-details">
 
-                <div class="stars">
-                    ★★★★★
-                    <span>
-                        (12)
-                    </span>
+                <div class="product-category">
+                    DESHI COLLECTION
                 </div>
 
                 <h3>
-                    কটন দেশি থ্রি-পিস
+                    Deshi Cotton Three Piece
                 </h3>
 
-                <p>
-                    আরামদায়ক দেশি কটন কাপড়
-                </p>
+                <div class="rating">
+                    ★★★★★
+                    <span>
+                        4.9
+                    </span>
+                </div>
 
-                <div class="price">
+                <div class="product-price">
 
                     <strong>
-                        ৳ 850
+                        ৳850
                     </strong>
 
                     <del>
-                        ৳ 1,000
+                        ৳1,000
                     </del>
 
                 </div>
@@ -551,11 +662,11 @@
 
                 <button
                     class="add-cart"
-                    data-product="কটন দেশি থ্রি-পিস"
+                    data-name="Deshi Cotton Three Piece"
                     data-price="850"
-                    type="button"
                 >
-                    🛒 Add to Cart
+                    Add to Cart
+                    <span>+</span>
                 </button>
 
             </div>
@@ -564,61 +675,63 @@
 
 
 
-        <!-- PRODUCT 2 -->
+        <!-- PRODUCT -->
 
         <article
-            class="product-card"
-            data-name="দেশি প্রিন্ট থ্রি পিস"
+            class="product"
+            data-category="cotton"
+            data-name="Premium Cotton Three Piece"
             data-price="950"
         >
 
-            <div class="product-image">
+            <div class="product-photo">
 
-                <span class="new-label">
+                <span class="product-tag new">
                     NEW
                 </span>
 
-                <button
-                    class="heart"
-                    type="button"
-                >
+                <button class="wishlist">
                     ♡
                 </button>
 
                 <img
-                    src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=85"
-                    alt="দেশি প্রিন্ট থ্রি-পিস"
+                    src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=90"
+                    alt="Premium Cotton Three Piece"
                     loading="lazy"
                 >
+
+                <div class="quick-view">
+                    Quick View
+                </div>
 
             </div>
 
 
-            <div class="product-info">
+            <div class="product-details">
 
-                <div class="stars">
-                    ★★★★★
-                    <span>
-                        (18)
-                    </span>
+                <div class="product-category">
+                    COTTON COLLECTION
                 </div>
 
                 <h3>
-                    দেশি প্রিন্ট থ্রি-পিস
+                    Premium Cotton Three Piece
                 </h3>
 
-                <p>
-                    সুন্দর দেশি প্রিন্টের ডিজাইন
-                </p>
+                <div class="rating">
+                    ★★★★★
+                    <span>
+                        4.8
+                    </span>
+                </div>
 
-                <div class="price">
+                <div class="product-price">
 
                     <strong>
-                        ৳ 950
+                        ৳950
                     </strong>
 
                     <del>
-                        ৳ 1,150
+                        ৳1,150
                     </del>
 
                 </div>
@@ -626,11 +739,11 @@
 
                 <button
                     class="add-cart"
-                    data-product="দেশি প্রিন্ট থ্রি-পিস"
+                    data-name="Premium Cotton Three Piece"
                     data-price="950"
-                    type="button"
                 >
-                    🛒 Add to Cart
+                    Add to Cart
+                    <span>+</span>
                 </button>
 
             </div>
@@ -639,61 +752,63 @@
 
 
 
-        <!-- PRODUCT 3 -->
+        <!-- PRODUCT -->
 
         <article
-            class="product-card"
-            data-name="পার্টি ওয়্যার থ্রি পিস"
+            class="product"
+            data-category="party"
+            data-name="Elegant Party Three Piece"
             data-price="1250"
         >
 
-            <div class="product-image">
+            <div class="product-photo">
 
-                <span class="discount">
+                <span class="product-tag">
                     -10%
                 </span>
 
-                <button
-                    class="heart"
-                    type="button"
-                >
+                <button class="wishlist">
                     ♡
                 </button>
 
                 <img
-                    src="https://images.unsplash.com/photo-1597983073493-88cd35cf93e8?auto=format&fit=crop&w=700&q=85"
-                    alt="পার্টি ওয়্যার থ্রি-পিস"
+                    src="https://images.unsplash.com/photo-1597983073493-88cd35cf93e8?auto=format&fit=crop&w=700&q=90"
+                    alt="Elegant Party Three Piece"
                     loading="lazy"
                 >
+
+                <div class="quick-view">
+                    Quick View
+                </div>
 
             </div>
 
 
-            <div class="product-info">
+            <div class="product-details">
 
-                <div class="stars">
-                    ★★★★★
-                    <span>
-                        (9)
-                    </span>
+                <div class="product-category">
+                    PARTY WEAR
                 </div>
 
                 <h3>
-                    পার্টি ওয়্যার থ্রি-পিস
+                    Elegant Party Three Piece
                 </h3>
 
-                <p>
-                    অনুষ্ঠান ও পার্টির জন্য
-                </p>
+                <div class="rating">
+                    ★★★★★
+                    <span>
+                        5.0
+                    </span>
+                </div>
 
-                <div class="price">
+                <div class="product-price">
 
                     <strong>
-                        ৳ 1,250
+                        ৳1,250
                     </strong>
 
                     <del>
-                        ৳ 1,400
+                        ৳1,400
                     </del>
 
                 </div>
@@ -701,11 +816,11 @@
 
                 <button
                     class="add-cart"
-                    data-product="পার্টি ওয়্যার থ্রি-পিস"
+                    data-name="Elegant Party Three Piece"
                     data-price="1250"
-                    type="button"
                 >
-                    🛒 Add to Cart
+                    Add to Cart
+                    <span>+</span>
                 </button>
 
             </div>
@@ -714,61 +829,63 @@
 
 
 
-        <!-- PRODUCT 4 -->
+        <!-- PRODUCT -->
 
         <article
-            class="product-card"
-            data-name="বুটিক স্টাইল থ্রি পিস"
+            class="product"
+            data-category="new"
+            data-name="Modern Deshi Collection"
             data-price="1100"
         >
 
-            <div class="product-image">
+            <div class="product-photo">
 
-                <span class="new-label">
-                    NEW
+                <span class="product-tag new">
+                    NEW ARRIVAL
                 </span>
 
-                <button
-                    class="heart"
-                    type="button"
-                >
+                <button class="wishlist">
                     ♡
                 </button>
 
                 <img
-                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
-                    alt="বুটিক স্টাইল থ্রি-পিস"
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=90"
+                    alt="Modern Deshi Collection"
                     loading="lazy"
                 >
+
+                <div class="quick-view">
+                    Quick View
+                </div>
 
             </div>
 
 
-            <div class="product-info">
+            <div class="product-details">
 
-                <div class="stars">
-                    ★★★★★
-                    <span>
-                        (15)
-                    </span>
+                <div class="product-category">
+                    NEW COLLECTION
                 </div>
 
                 <h3>
-                    বুটিক স্টাইল থ্রি-পিস
+                    Modern Deshi Collection
                 </h3>
 
-                <p>
-                    স্টাইলিশ ডিজাইনের দেশি পোশাক
-                </p>
+                <div class="rating">
+                    ★★★★★
+                    <span>
+                        4.9
+                    </span>
+                </div>
 
-                <div class="price">
+                <div class="product-price">
 
                     <strong>
-                        ৳ 1,100
+                        ৳1,100
                     </strong>
 
                     <del>
-                        ৳ 1,300
+                        ৳1,300
                     </del>
 
                 </div>
@@ -776,11 +893,11 @@
 
                 <button
                     class="add-cart"
-                    data-product="বুটিক স্টাইল থ্রি-পিস"
+                    data-name="Modern Deshi Collection"
                     data-price="1100"
-                    type="button"
                 >
-                    🛒 Add to Cart
+                    Add to Cart
+                    <span>+</span>
                 </button>
 
             </div>
@@ -788,75 +905,224 @@
         </article>
 
 
-    </div>
-
-
-
-    <div
-        class="no-result"
-        id="noResult"
-    >
-        কোনো পণ্য পাওয়া যায়নি।
     </div>
 
 </section>
 
 
 
-<!-- ==================================================
-     CUSTOM TAILORING
-================================================== -->
+<!-- =====================================================
+     FEATURE BANNER
+===================================================== -->
 
-<section
-    class="custom-section"
-    id="custom"
->
+<section class="feature-banner">
 
-    <div class="custom-image">
+
+    <div class="feature-image">
 
         <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85"
-            alt="Custom Tailoring"
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=90"
+            alt="Anjona Deshi Fashion"
             loading="lazy"
         >
 
     </div>
 
 
-    <div class="custom-content">
+    <div class="feature-content">
 
-        <small>
-            CUSTOM TAILORING
-        </small>
+        <span>
+            THE ANJONA EDIT
+        </span>
 
         <h2>
-            আপনার ডিজাইন,
-            <span>আপনার মাপ</span>
+            Simple.
+            <br>
+            Elegant.
+            <br>
+            Deshi.
         </h2>
 
         <p>
-            আপনার কাছে থাকা ছবি বা ডিজাইন পাঠান।
-            পছন্দের কাপড়, রঙ ও মাপ অনুযায়ী
-            আপনার জন্য পোশাক তৈরি করা যাবে।
+            দেশি কাপড়ের সৌন্দর্যকে আধুনিক
+            ডিজাইনের সাথে মিলিয়ে তৈরি আমাদের
+            বিশেষ কালেকশন।
+        </p>
+
+        <a
+            href="#shop"
+            class="dark-btn"
+        >
+            Discover More →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     THREE PIECE
+===================================================== -->
+
+<section
+    class="three-piece"
+    id="threepiece"
+>
+
+
+    <div class="section-heading centered">
+
+        <span>
+            DESHI FASHION
+        </span>
+
+        <h2>
+            Three Piece Collection
+        </h2>
+
+        <p>
+            প্রতিদিনের আরাম থেকে বিশেষ অনুষ্ঠানের
+            জন্য—আপনার জন্য বেছে নেওয়া দেশি কালেকশন।
+        </p>
+
+    </div>
+
+
+    <div class="three-grid">
+
+
+        <div class="three-card large">
+
+            <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=90"
+                alt="Everyday Collection"
+                loading="lazy"
+            >
+
+            <div class="three-overlay">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Everyday Deshi
+                </h3>
+
+                <a href="#shop">
+                    Shop Collection →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="three-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=90"
+                alt="Modern Collection"
+                loading="lazy"
+            >
+
+            <div class="three-overlay">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Modern Deshi
+                </h3>
+
+                <a href="#shop">
+                    Explore →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="three-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=90"
+                alt="Party Wear"
+                loading="lazy"
+            >
+
+            <div class="three-overlay">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Party Wear
+                </h3>
+
+                <a href="#shop">
+                    Explore →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CUSTOM TAILORING
+===================================================== -->
+
+<section
+    class="custom"
+    id="custom"
+>
+
+
+    <div class="custom-content">
+
+        <span>
+            MADE FOR YOU
+        </span>
+
+        <h2>
+            আপনার ডিজাইন।
+            <br>
+            আপনার মাপ।
+            <br>
+            <em>আপনার Anjona.</em>
+        </h2>
+
+        <p>
+            আপনার পছন্দের ছবি বা ডিজাইন পাঠান।
+            কাপড়, রঙ ও মাপ অনুযায়ী
+            কাস্টম পোশাক তৈরি করা যাবে।
         </p>
 
 
-        <div class="custom-list">
+        <div class="custom-points">
 
             <div>
-                ✓ নিজের ডিজাইন
+                ✓ Custom Measurement
             </div>
 
             <div>
-                ✓ নিজের মাপ
+                ✓ Custom Design
             </div>
 
             <div>
-                ✓ নিজের পছন্দের কাপড়
-            </div>
-
-            <div>
-                ✓ কাস্টম ফিটিং
+                ✓ Deshi Fabric
             </div>
 
         </div>
@@ -864,115 +1130,139 @@
 
         <a
             href="#order"
-            class="shop-btn"
+            class="dark-btn"
         >
             Custom Order করুন →
         </a>
 
     </div>
 
+
+    <div class="custom-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=90"
+            alt="Custom Tailoring"
+            loading="lazy"
+        >
+
+    </div>
+
 </section>
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      NEW ARRIVAL
-================================================== -->
+===================================================== -->
 
 <section
     class="new-arrival"
     id="new"
 >
 
-    <div class="section-head">
+
+    <div class="section-heading">
 
         <div>
 
-            <small>
-                JUST ARRIVED
-            </small>
+            <span>
+                JUST IN
+            </span>
 
             <h2>
-                নতুন কালেকশন
+                New Arrivals
             </h2>
 
         </div>
 
         <a href="#shop">
-            সব দেখুন →
+            Shop All →
         </a>
 
     </div>
 
 
-    <div class="mini-products">
+    <div class="arrival-grid">
 
 
-        <div class="mini-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80"
-                alt="নতুন থ্রি-পিস"
-                loading="lazy"
-            >
+        <div class="arrival-card">
 
             <div>
 
+                <span>
+                    NEW
+                </span>
+
                 <h3>
-                    New Cotton
+                    Soft Cotton
                 </h3>
 
-                <strong>
-                    ৳ 890
-                </strong>
+                <p>
+                    ৳890
+                </p>
 
             </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=85"
+                alt="Soft Cotton"
+                loading="lazy"
+            >
 
         </div>
 
 
-        <div class="mini-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80"
-                alt="দেশি ডিজাইন"
-                loading="lazy"
-            >
+        <div class="arrival-card">
 
             <div>
+
+                <span>
+                    NEW
+                </span>
 
                 <h3>
                     Deshi Print
                 </h3>
 
-                <strong>
-                    ৳ 980
-                </strong>
+                <p>
+                    ৳980
+                </p>
 
             </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=85"
+                alt="Deshi Print"
+                loading="lazy"
+            >
 
         </div>
 
 
-        <div class="mini-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80"
-                alt="পার্টি কালেকশন"
-                loading="lazy"
-            >
+        <div class="arrival-card">
 
             <div>
 
+                <span>
+                    LIMITED
+                </span>
+
                 <h3>
-                    Party Collection
+                    Elegant Party
                 </h3>
 
-                <strong>
-                    ৳ 1,290
-                </strong>
+                <p>
+                    ৳1,290
+                </p>
 
             </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=600&q=85"
+                alt="Elegant Party"
+                loading="lazy"
+            >
 
         </div>
 
@@ -983,77 +1273,58 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ABOUT
-================================================== -->
+===================================================== -->
 
 <section
-    class="about-shop"
+    class="about"
     id="about"
 >
 
-    <div>
 
-        <small>
-            ABOUT ANJONA
-        </small>
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=90"
+            alt="Anjona Ladies Tailors"
+            loading="lazy"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>
+            OUR STORY
+        </span>
 
         <h2>
-            দেশি পোশাকের
-            <span>নিজস্ব ঠিকানা</span>
+            দেশি ফ্যাশনকে
+            <br>
+            ভালোবাসা থেকেই
+            <em>Anjona.</em>
         </h2>
 
         <p>
-            Anjona Ladies Tailors-এ আমরা দেশি
-            কাপড়, সুন্দর ডিজাইন এবং ভালো ফিটিংকে
-            গুরুত্ব দিই। আপনার দৈনন্দিন পোশাক
-            থেকে বিশেষ দিনের থ্রি-পিস—
-            সবকিছু আপনার পছন্দ অনুযায়ী।
+            Anjona Ladies Tailors-এর লক্ষ্য হলো
+            দেশি পোশাককে আরও সুন্দর, আধুনিক
+            এবং ব্যক্তিগত করে তোলা।
+        </p>
+
+        <p>
+            আপনার পছন্দের কাপড়, ডিজাইন এবং
+            মাপকে গুরুত্ব দিয়ে প্রতিটি অর্ডার
+            যত্নসহকারে তৈরি করা হয়।
         </p>
 
         <a
             href="#contact"
-            class="outline-btn"
+            class="text-btn"
         >
-            আমাদের সাথে কথা বলুন
+            Learn More →
         </a>
-
-    </div>
-
-
-    <div class="about-stats">
-
-        <div>
-            <strong>
-                25+
-            </strong>
-
-            <span>
-                Designs
-            </span>
-        </div>
-
-
-        <div>
-            <strong>
-                100%
-            </strong>
-
-            <span>
-                Custom Care
-            </span>
-        </div>
-
-
-        <div>
-            <strong>
-                🇧🇩
-            </strong>
-
-            <span>
-                Deshi Style
-            </span>
-        </div>
 
     </div>
 
@@ -1061,197 +1332,201 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      ORDER
-================================================== -->
+===================================================== -->
 
 <section
-    class="order-section"
+    class="order"
     id="order"
 >
 
+
     <div class="order-heading">
 
-        <small>
+        <span>
             ORDER NOW
-        </small>
+        </span>
 
         <h2>
-            আপনার অর্ডারের তথ্য দিন
+            আপনার পছন্দের পোশাক
+            অর্ডার করুন
         </h2>
 
         <p>
-            তথ্য পাঠালে WhatsApp-এ অর্ডারের
-            বিস্তারিত চলে যাবে।
+            নিচের তথ্য দিন। আমরা WhatsApp-এর
+            মাধ্যমে আপনার সাথে যোগাযোগ করব।
         </p>
 
     </div>
 
 
-    <div class="order-box">
-
-        <form id="orderForm">
-
-
-            <div class="field">
-
-                <label>
-                    আপনার নাম
-                </label>
-
-                <input
-                    type="text"
-                    id="customerName"
-                    placeholder="নাম লিখুন"
-                    required
-                >
-
-            </div>
+    <form
+        class="order-form"
+        id="orderForm"
+    >
 
 
-            <div class="field">
+        <div class="input-group">
 
-                <label>
-                    মোবাইল নম্বর
-                </label>
+            <label>
+                আপনার নাম
+            </label>
 
-                <input
-                    type="tel"
-                    id="customerPhone"
-                    placeholder="01XXXXXXXXX"
-                    required
-                >
+            <input
+                type="text"
+                id="customerName"
+                placeholder="আপনার নাম"
+                required
+            >
 
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    পণ্য
-                </label>
-
-                <select
-                    id="serviceName"
-                    required
-                >
-
-                    <option value="">
-                        পণ্য নির্বাচন করুন
-                    </option>
-
-                    <option>
-                        কটন দেশি থ্রি-পিস
-                    </option>
-
-                    <option>
-                        দেশি প্রিন্ট থ্রি-পিস
-                    </option>
-
-                    <option>
-                        পার্টি ওয়্যার থ্রি-পিস
-                    </option>
-
-                    <option>
-                        বুটিক স্টাইল থ্রি-পিস
-                    </option>
-
-                    <option>
-                        Custom Tailoring
-                    </option>
-
-                </select>
-
-            </div>
+        </div>
 
 
-            <div class="field">
+        <div class="input-group">
 
-                <label>
-                    Quantity
-                </label>
+            <label>
+                মোবাইল নম্বর
+            </label>
 
-                <input
-                    type="number"
-                    id="quantity"
-                    value="1"
-                    min="1"
-                    max="20"
-                >
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="01XXXXXXXXX"
+                required
+            >
 
-            </div>
-
-
-            <div class="field full">
-
-                <label>
-                    বিস্তারিত
-                </label>
-
-                <textarea
-                    id="orderDetails"
-                    placeholder="রঙ, সাইজ, ডিজাইন বা অন্য কোনো তথ্য..."
-                ></textarea>
-
-            </div>
+        </div>
 
 
-            <div class="field full">
+        <div class="input-group">
 
-                <button
-                    type="submit"
-                    class="submit-order"
-                >
-                    📲 WhatsApp-এ অর্ডার পাঠান
-                </button>
+            <label>
+                পণ্য
+            </label>
 
-            </div>
+            <select
+                id="productName"
+                required
+            >
 
-        </form>
+                <option value="">
+                    পণ্য নির্বাচন করুন
+                </option>
 
-    </div>
+                <option>
+                    Deshi Cotton Three Piece
+                </option>
+
+                <option>
+                    Premium Cotton Three Piece
+                </option>
+
+                <option>
+                    Elegant Party Three Piece
+                </option>
+
+                <option>
+                    Modern Deshi Collection
+                </option>
+
+                <option>
+                    Custom Tailoring
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                Quantity
+            </label>
+
+            <input
+                type="number"
+                id="quantity"
+                min="1"
+                value="1"
+            >
+
+        </div>
+
+
+        <div class="input-group full">
+
+            <label>
+                অতিরিক্ত তথ্য
+            </label>
+
+            <textarea
+                id="orderMessage"
+                placeholder="রঙ, সাইজ, ডিজাইন বা অন্য কোনো তথ্য..."
+            ></textarea>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="submit-btn"
+        >
+            WhatsApp-এ অর্ডার পাঠান
+            →
+        </button>
+
+    </form>
 
 </section>
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      CONTACT
-================================================== -->
+===================================================== -->
 
 <section
-    class="contact-section"
+    class="contact"
     id="contact"
 >
 
-    <small>
-        CONTACT US
-    </small>
+    <div>
 
-    <h2>
-        অর্ডার বা তথ্যের জন্য যোগাযোগ করুন
-    </h2>
+        <span>
+            GET IN TOUCH
+        </span>
 
-    <p>
-        আপনার পছন্দের থ্রি-পিস বা কাস্টম
-        ডিজাইন নিয়ে সরাসরি কথা বলুন।
-    </p>
+        <h2>
+            Let's Talk About
+            <em>Your Style.</em>
+        </h2>
+
+        <p>
+            অর্ডার, ডিজাইন বা কাস্টম সেলাই নিয়ে
+            কথা বলতে আমাদের সাথে যোগাযোগ করুন।
+        </p>
+
+    </div>
 
 
-    <div class="contact-buttons">
+    <div class="contact-actions">
 
         <a
             href="https://wa.me/8801717503093"
             target="_blank"
             rel="noopener noreferrer"
         >
-            💬 WhatsApp
+            WhatsApp
+            ↗
         </a>
+
 
         <a
             href="tel:+8801717503093"
         >
-            ☎️ 01717-503093
+            01717-503093
         </a>
 
     </div>
@@ -1260,13 +1535,9 @@
 
 
 
-</main>
-
-
-
-<!-- ==================================================
+<!-- =====================================================
      CART DRAWER
-================================================== -->
+===================================================== -->
 
 <div
     class="cart-overlay"
@@ -1279,15 +1550,14 @@
     id="cartDrawer"
 >
 
-    <div class="cart-header">
+    <div class="cart-top">
 
         <h2>
-            🛒 Your Cart
+            Your Cart
         </h2>
 
         <button
             id="closeCart"
-            type="button"
         >
             ✕
         </button>
@@ -1296,27 +1566,27 @@
 
 
     <div
-        class="cart-items"
         id="cartItems"
+        class="cart-items"
     >
 
         <div class="empty-cart">
-            আপনার Cart এখনো খালি।
+            আপনার Cart খালি।
         </div>
 
     </div>
 
 
-    <div class="cart-footer">
+    <div class="cart-bottom">
 
-        <div class="cart-total">
+        <div>
 
             <span>
                 Total
             </span>
 
             <strong id="cartTotal">
-                ৳ 0
+                ৳0
             </strong>
 
         </div>
@@ -1324,10 +1594,9 @@
 
         <a
             href="#order"
-            id="checkoutButton"
-            class="checkout-btn"
+            id="checkoutBtn"
         >
-            Order Now →
+            Checkout →
         </a>
 
     </div>
@@ -1336,37 +1605,52 @@
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
 <footer>
 
-    <div class="footer-grid">
+    <div class="footer-main">
 
 
-        <div>
+        <div class="footer-brand">
 
-            <div class="footer-logo">
-                🧵 Anjona Ladies Tailors
+            <div class="brand-text">
+
+                <strong>
+                    ANJONA
+                </strong>
+
+                <span>
+                    LADIES TAILORS
+                </span>
+
             </div>
 
+
             <p>
-                দেশি কাপড়, দেশি স্টাইল,
-                আপনার পছন্দের পোশাক।
+                দেশি কাপড়।
+                আধুনিক স্টাইল।
+                আপনার নিজস্ব সৌন্দর্য।
             </p>
 
         </div>
 
 
-        <div>
+
+        <div class="footer-column">
 
             <h3>
                 Shop
             </h3>
 
+            <a href="#shop">
+                All Products
+            </a>
+
             <a href="#threepiece">
-                Three-Piece
+                Three Piece
             </a>
 
             <a href="#new">
@@ -1380,7 +1664,30 @@
         </div>
 
 
-        <div>
+
+        <div class="footer-column">
+
+            <h3>
+                Help
+            </h3>
+
+            <a href="#order">
+                How to Order
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#about">
+                About Us
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
 
             <h3>
                 Contact
@@ -1403,10 +1710,15 @@
     </div>
 
 
-    <div class="copyright">
+    <div class="footer-bottom">
 
-        © 2026 Anjona Ladies Tailors.
-        All Rights Reserved.
+        <span>
+            © 2026 Anjona Ladies Tailors
+        </span>
+
+        <span>
+            Made for Deshi Fashion ♥
+        </span>
 
     </div>
 
@@ -1414,11 +1726,12 @@
 
 
 
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
 
 <script src="script.js"></script>
+
 
 </body>
 </html>
