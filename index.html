@@ -1,431 +1,1633 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<title>ATTAR SHOP — Premium Fragrance</title>
 
-    <title>
-        Anjona Ladies Tailors | Premium Deshi Fashion
-    </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta
-        name="description"
-        content="Anjona Ladies Tailors - Premium Bangladeshi Three Piece & Ladies Fashion"
-    >
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <link rel="stylesheet" href="style.css">
+:root{
+    --black:#090807;
+    --dark:#11100d;
+    --dark2:#191612;
+    --gold:#d9a63a;
+    --gold2:#f0c15a;
+    --cream:#f6f0e4;
+    --cream2:#fffaf0;
+    --text:#f8f3e8;
+    --muted:#bdb5a5;
+    --border:rgba(218,166,58,.28);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat','Noto Sans Bengali',sans-serif;
+    background:var(--cream);
+    color:#17130e;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    height:38px;
+    background:#050504;
+    color:#d8b568;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 4%;
+    font-size:11px;
+    border-bottom:1px solid rgba(218,166,58,.15);
+}
+
+.top-left,
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.top-right span{
+    cursor:pointer;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:76px;
+    background:#0b0a08;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 4%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(218,166,58,.18);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold2);
+    font-size:24px;
+    position:relative;
+}
+
+.logo-icon:after{
+    content:"";
+    position:absolute;
+    width:34px;
+    height:34px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+}
+
+.logo-text{
+    line-height:.9;
+}
+
+.logo-text strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:29px;
+    letter-spacing:2px;
+}
+
+.logo-text small{
+    display:block;
+    text-align:center;
+    font-size:9px;
+    letter-spacing:5px;
+    color:var(--gold2);
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:29px;
+}
+
+.nav-links a{
+    color:#eee8dc;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    transition:.25s;
+    position:relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:var(--gold2);
+}
+
+.nav-links a.active:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-28px;
+    height:2px;
+    background:var(--gold);
+}
+
+.nav-icons{
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+.nav-icon{
+    color:white;
+    font-size:21px;
+    cursor:pointer;
+    position:relative;
+}
+
+.badge{
+    position:absolute;
+    top:-8px;
+    right:-9px;
+    background:var(--gold);
+    color:#111;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    font-size:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.mobile-menu{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:550px;
+    background:
+        linear-gradient(90deg,rgba(7,6,5,.97) 0%,rgba(7,6,5,.88) 38%,rgba(7,6,5,.25) 70%,rgba(7,6,5,.58) 100%),
+        url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=90")
+        center/cover no-repeat;
+    color:white;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 75% 50%,rgba(215,157,43,.18),transparent 35%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:55%;
+    padding-left:6%;
+}
+
+.hero-script{
+    color:var(--gold2);
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    font-style:italic;
+    margin-bottom:8px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:68px;
+    line-height:.9;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+    display:block;
+}
+
+.hero p{
+    max-width:540px;
+    color:#ddd5c5;
+    font-family:'Noto Sans Bengali',sans-serif;
+    line-height:1.8;
+    font-size:14px;
+    margin-bottom:27px;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+}
+
+.btn{
+    padding:14px 27px;
+    border-radius:3px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    font-size:12px;
+    font-weight:700;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.btn-gold{
+    background:var(--gold2);
+    color:#17120b;
+}
+
+.btn-gold:hover{
+    background:#fff;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+.hero-trust{
+    display:flex;
+    gap:30px;
+    margin-top:38px;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.trust-circle{
+    width:32px;
+    height:32px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--gold2);
+}
+
+.trust-item strong{
+    display:block;
+    font-size:9px;
+    color:white;
+}
+
+.trust-item small{
+    color:#a9a090;
+    font-size:8px;
+}
+
+.slider-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:50%;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    z-index:5;
+}
+
+.arrow-left{
+    left:18px;
+}
+
+.arrow-right{
+    right:18px;
+}
+
+.slider-dots{
+    position:absolute;
+    bottom:17px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.slider-dots span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#888;
+}
+
+.slider-dots span.active{
+    background:var(--gold2);
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    background:#fbf5e9;
+    padding:28px 5% 25px;
+    display:flex;
+    justify-content:center;
+    gap:48px;
+    border-bottom:1px solid #eadfcd;
+}
+
+.category{
+    text-align:center;
+    cursor:pointer;
+}
+
+.category-img{
+    width:92px;
+    height:92px;
+    border-radius:50%;
+    border:1px solid #d5a448;
+    padding:6px;
+    background:#fffaf1;
+    transition:.3s;
+    object-fit:cover;
+}
+
+.category:hover .category-img{
+    transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.category p{
+    margin-top:9px;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:42px 4%;
+}
+
+.section-dark{
+    background:#0e0d0b;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:24px;
+}
+
+.title-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.title-line{
+    width:55px;
+    height:1px;
+    background:var(--gold);
+}
+
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    color:var(--gold2);
+}
+
+.view-all{
+    border:1px solid var(--gold);
+    color:var(--gold2);
+    padding:9px 18px;
+    font-size:10px;
+    text-decoration:none;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
+}
+
+.product{
+    background:#171613;
+    border:1px solid #353129;
+    border-radius:7px;
+    overflow:hidden;
+    position:relative;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    border-color:#9c752d;
+}
+
+.product-img{
+    height:210px;
+    background:linear-gradient(145deg,#25221c,#0b0a08);
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.product:hover .product-img img{
+    transform:scale(1.05);
+}
+
+.wishlist{
+    position:absolute;
+    right:9px;
+    top:9px;
+    width:27px;
+    height:27px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    cursor:pointer;
+    z-index:2;
+}
+
+.product-info{
+    padding:11px;
+    color:white;
+}
+
+.product-info h3{
+    font-size:12px;
+    margin-bottom:6px;
+}
+
+.rating{
+    color:#f3b83e;
+    font-size:10px;
+    margin-bottom:8px;
+}
+
+.rating span{
+    color:#aaa;
+    margin-left:4px;
+}
+
+.price{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:9px;
+}
+
+.price strong{
+    color:var(--gold2);
+    font-size:16px;
+}
+
+.old-price{
+    color:#777;
+    text-decoration:line-through;
+    font-size:10px;
+}
+
+.product-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
+}
+
+.product-actions button{
+    border:1px solid var(--gold);
+    background:transparent;
+    color:var(--gold2);
+    padding:8px 4px;
+    font-size:8px;
+    font-weight:700;
+    cursor:pointer;
+    border-radius:2px;
+}
+
+.product-actions button:last-child{
+    background:var(--gold2);
+    color:#111;
+}
+
+/* ================= PROMO ================= */
+
+.promos{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:12px;
+    padding:0 4% 14px;
+}
+
+.promo{
+    min-height:175px;
+    border-radius:7px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:30px;
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.promo:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.2));
+}
+
+.promo-content{
+    position:relative;
+    z-index:2;
+}
+
+.promo h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:var(--gold2);
+    margin-bottom:8px;
+}
+
+.promo p{
+    font-size:11px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.promo a{
+    display:inline-block;
+    padding:9px 15px;
+    background:var(--gold2);
+    color:#111;
+    text-decoration:none;
+    font-size:9px;
+    font-weight:700;
+}
+
+.promo-1{
+    background-image:url("https://images.unsplash.com/photo-1595425970377-c9703cf48b6f?auto=format&fit=crop&w=900&q=80");
+}
+
+.promo-2{
+    background-image:url("https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=900&q=80");
+}
+
+.promo-3{
+    background-image:url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=80");
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+    margin:18px 4% 40px;
+    background:#fffaf1;
+    border:1px solid #e6dac5;
+    border-radius:8px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    padding:20px 10px;
+}
+
+.benefit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    border-right:1px solid #e3d9c7;
+}
+
+.benefit:last-child{
+    border-right:none;
+}
+
+.benefit-icon{
+    width:42px;
+    height:42px;
+    border:1px solid #d2a24b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#a87824;
+    font-size:20px;
+}
+
+.benefit h4{
+    font-size:10px;
+    margin-bottom:5px;
+}
+
+.benefit p{
+    font-size:8px;
+    color:#777;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+    background:#100e0b;
+    padding:42px 4%;
+    color:white;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.review{
+    border:1px solid #39342c;
+    background:#171511;
+    padding:25px;
+    border-radius:7px;
+}
+
+.quote{
+    color:var(--gold2);
+    font-size:35px;
+    line-height:.5;
+}
+
+.review p{
+    color:#d7d0c4;
+    font-size:12px;
+    line-height:1.8;
+    margin:13px 0;
+    font-family:'Noto Sans Bengali',sans-serif;
+}
+
+.review-stars{
+    color:#f2b63b;
+    font-size:11px;
+}
+
+.review-name{
+    color:#aaa;
+    font-size:10px;
+    margin-left:7px;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter{
+    background:#0a0907;
+    color:white;
+    padding:28px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    border-top:1px solid #33291b;
+}
+
+.newsletter-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.mail-icon{
+    font-size:38px;
+    color:var(--gold2);
+}
+
+.newsletter h3{
+    color:var(--gold2);
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+}
+
+.newsletter p{
+    color:#999;
+    font-size:10px;
+    margin-top:4px;
+}
+
+.newsletter-form{
+    display:flex;
+    width:470px;
+}
+
+.newsletter-form input{
+    flex:1;
+    border:none;
+    padding:14px;
+    outline:none;
+    font-size:11px;
+}
+
+.newsletter-form button{
+    width:125px;
+    border:none;
+    background:var(--gold2);
+    color:#111;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050504;
+    color:#aaa;
+    padding:45px 5% 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-brand p{
+    margin-top:15px;
+    font-size:11px;
+    line-height:1.8;
+    max-width:340px;
+}
+
+.footer h4{
+    color:var(--gold2);
+    font-size:12px;
+    margin-bottom:17px;
+}
+
+.footer a{
+    display:block;
+    color:#aaa;
+    text-decoration:none;
+    font-size:10px;
+    margin-bottom:10px;
+}
+
+.footer a:hover{
+    color:var(--gold2);
+}
+
+.footer-bottom{
+    border-top:1px solid #25221d;
+    margin-top:35px;
+    padding-top:18px;
+    display:flex;
+    justify-content:space-between;
+    font-size:9px;
+}
+
+/* ================= CART ================= */
+
+.cart-panel{
+    position:fixed;
+    top:0;
+    right:-420px;
+    width:400px;
+    height:100vh;
+    background:#12100d;
+    color:white;
+    z-index:2000;
+    transition:.35s;
+    box-shadow:-5px 0 30px rgba(0,0,0,.5);
+    padding:25px;
+}
+
+.cart-panel.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:18px;
+    border-bottom:1px solid #383228;
+}
+
+.cart-header h3{
+    color:var(--gold2);
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+}
+
+.close-cart{
+    cursor:pointer;
+    font-size:24px;
+}
+
+.cart-items{
+    padding:20px 0;
+    height:calc(100vh - 190px);
+    overflow:auto;
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    border-bottom:1px solid #302b24;
+    padding:13px 0;
+}
+
+.cart-item img{
+    width:65px;
+    height:65px;
+    object-fit:cover;
+}
+
+.cart-item h4{
+    font-size:11px;
+    margin-bottom:7px;
+}
+
+.cart-item p{
+    color:var(--gold2);
+    font-size:12px;
+}
+
+.cart-footer{
+    position:absolute;
+    bottom:20px;
+    left:25px;
+    right:25px;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-top:1px solid #383228;
+    font-weight:700;
+}
+
+.checkout{
+    width:100%;
+    padding:14px;
+    background:var(--gold2);
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:1500;
+    display:none;
+}
+
+.overlay.show{
+    display:block;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translate(-50%,120px);
+    background:#16130f;
+    color:white;
+    border:1px solid var(--gold);
+    padding:13px 22px;
+    border-radius:4px;
+    z-index:3000;
+    font-size:11px;
+    transition:.35s;
+}
+
+.toast.show{
+    transform:translate(-50%,0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .categories{
+        gap:25px;
+        overflow-x:auto;
+        justify-content:flex-start;
+    }
+}
+
+@media(max-width:800px){
+
+    .topbar{
+        font-size:9px;
+    }
+
+    .top-right{
+        display:none;
+    }
+
+    .navbar{
+        height:68px;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:#0b0a08;
+        flex-direction:column;
+        padding:25px;
+        display:none;
+        border-top:1px solid #33291c;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links a.active:after{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .nav-icons{
+        gap:11px;
+    }
+
+    .hero{
+        min-height:620px;
+        align-items:flex-end;
+        padding-bottom:45px;
+        background-position:center;
+    }
+
+    .hero-content{
+        width:100%;
+        padding:30px 7%;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    .hero-script{
+        font-size:21px;
+    }
+
+    .hero-trust{
+        gap:14px;
+        flex-wrap:wrap;
+    }
+
+    .categories{
+        justify-content:flex-start;
+        padding-left:20px;
+    }
+
+    .category-img{
+        width:72px;
+        height:72px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-img{
+        height:190px;
+    }
+
+    .promos{
+        grid-template-columns:1fr;
+    }
+
+    .benefits{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .benefit{
+        padding:15px 5px;
+        border-bottom:1px solid #e3d9c7;
+    }
+
+    .benefit:nth-child(2){
+        border-right:none;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .newsletter{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .newsletter-form{
+        width:100%;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    .cart-panel{
+        width:100%;
+        right:-100%;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo-text strong{
+        font-size:23px;
+    }
+
+    .logo-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        justify-content:center;
+    }
+
+    .hero-trust{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .products{
+        gap:8px;
+    }
+
+    .product-img{
+        height:155px;
+    }
+
+    .product-info{
+        padding:8px;
+    }
+
+    .section{
+        padding:30px 3%;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .benefits{
+        grid-template-columns:1fr;
+    }
+
+    .benefit{
+        border-right:none!important;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:8px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     ANNOUNCEMENT BAR
-===================================================== -->
-
-<div class="announcement">
-
-    <div class="announcement-inner">
-
-        <span>
-            ✨ নতুন কালেকশন এসেছে
-        </span>
-
-        <span>
-            দেশি থ্রি-পিস • কাস্টম সেলাই • অর্ডার নেওয়া হয়
-        </span>
-
-        <a href="#shop">
-            Shop Now →
-        </a>
-
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="top-left">
+        <span>🚚 ফ্রি ডেলিভারি ৳১৮৯৯+ অর্ডারে</span>
+        <span>100% Authentic Attar</span>
     </div>
 
+    <div class="top-right">
+        <span>☎ +880 1234-567890</span>
+        <span>f</span>
+        <span>◎</span>
+        <span>▶</span>
+    </div>
 </div>
 
 
+<!-- NAVBAR -->
+<nav class="navbar">
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <a href="#" class="logo">
 
-<header class="header">
+        <div class="logo-icon">✦</div>
 
-    <div class="header-inner">
-
-
-        <!-- LOGO -->
-
-        <a
-            href="#home"
-            class="brand"
-        >
-
-            <div class="brand-symbol">
-                A
-            </div>
-
-            <div class="brand-text">
-
-                <strong>
-                    ANJONA
-                </strong>
-
-                <span>
-                    LADIES TAILORS
-                </span>
-
-            </div>
-
-        </a>
-
-
-
-        <!-- DESKTOP NAV -->
-
-        <nav class="desktop-nav">
-
-            <a
-                href="#home"
-                class="active"
-            >
-                Home
-            </a>
-
-            <a href="#shop">
-                Shop
-            </a>
-
-            <a href="#threepiece">
-                Three Piece
-            </a>
-
-            <a href="#new">
-                New Arrival
-            </a>
-
-            <a href="#custom">
-                Custom
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </nav>
-
-
-
-        <!-- ACTIONS -->
-
-        <div class="header-actions">
-
-            <button
-                class="icon-btn"
-                id="searchBtn"
-                aria-label="Search"
-            >
-                ⌕
-            </button>
-
-
-            <button
-                class="icon-btn"
-                id="cartBtn"
-                aria-label="Cart"
-            >
-                ♡
-            </button>
-
-
-            <button
-                class="cart-btn"
-                id="openCart"
-            >
-
-                🛍
-
-                <span>
-                    Cart
-                </span>
-
-                <b id="cartCount">
-                    0
-                </b>
-
-            </button>
-
-
-            <button
-                class="mobile-menu-btn"
-                id="menuBtn"
-            >
-                ☰
-            </button>
-
+        <div class="logo-text">
+            <strong>ATTAR</strong>
+            <small>SHOP</small>
         </div>
 
+    </a>
+
+
+    <div class="nav-links" id="navLinks">
+        <a href="#" class="active">Home</a>
+        <a href="#products">All Attar</a>
+        <a href="#products">Best Sellers</a>
+        <a href="#categories">New Arrivals</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
     </div>
 
 
+    <div class="nav-icons">
 
-    <!-- MOBILE NAV -->
+        <span class="nav-icon">⌕</span>
 
-    <div
-        class="mobile-nav"
-        id="mobileNav"
-    >
+        <span class="nav-icon">♙</span>
 
-        <a href="#home">
-            Home
-        </a>
+        <span class="nav-icon">
+            ♡
+            <i class="badge" id="wishCount">0</i>
+        </span>
 
-        <a href="#shop">
-            Shop
-        </a>
+        <span class="nav-icon" onclick="openCart()">
+            🛒
+            <i class="badge" id="cartCount">0</i>
+        </span>
 
-        <a href="#threepiece">
-            Three Piece
-        </a>
-
-        <a href="#new">
-            New Arrival
-        </a>
-
-        <a href="#custom">
-            Custom Tailoring
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
-        <a href="#contact">
-            Contact
-        </a>
+        <span class="mobile-menu" onclick="toggleMenu()">☰</span>
 
     </div>
 
-</header>
+</nav>
 
 
+<!-- HERO -->
+<section class="hero">
 
-<!-- =====================================================
-     SEARCH PANEL
-===================================================== -->
+    <div class="slider-arrow arrow-left">‹</div>
 
-<div
-    class="search-panel"
-    id="searchPanel"
->
+    <div class="hero-content">
 
-    <div class="search-panel-inner">
-
-        <input
-            type="search"
-            id="searchInput"
-            placeholder="থ্রি-পিস, কটন, ডিজাইন খুঁজুন..."
-        >
-
-        <button
-            id="closeSearch"
-        >
-            ✕
-        </button>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section
-    class="hero"
-    id="home"
->
-
-
-    <div class="hero-left">
-
-        <div class="hero-label">
-
-            <span>
-                NEW SEASON
-            </span>
-
-            <i></i>
-
-            <small>
-                2026 COLLECTION
-            </small>
-
+        <div class="hero-script">
+            Pure Fragrance, Pure Identity
         </div>
-
 
         <h1>
-
-            দেশি পোশাকে
-
-            <br>
-
-            <em>
-                আপনার নিজস্ব
-            </em>
-
-            <br>
-
-            সৌন্দর্য।
-
+            PREMIUM ATTAR
+            <span>COLLECTION</span>
         </h1>
 
-
         <p>
-
-            বাংলাদেশের দেশি কাপড়, আধুনিক
-            ডিজাইন এবং নিখুঁত টেইলারিং—
-            সব এক জায়গায়।
-
+            প্রিমিয়াম কোয়ালিটির আতর, যা আপনার ব্যক্তিত্বকে করে
+            আরও আকর্ষণীয় ও মনোমুগ্ধকর। দীর্ঘস্থায়ী সুবাসে প্রতিদিন
+            হয়ে উঠুক আরও বিশেষ।
         </p>
 
+        <div class="buttons">
 
-        <div class="hero-actions">
-
-            <a
-                href="#shop"
-                class="dark-btn"
-            >
-                Explore Collection
-                <span>→</span>
+            <a href="#products" class="btn btn-gold">
+                SHOP NOW →
             </a>
 
-
-            <a
-                href="#custom"
-                class="text-btn"
-            >
-                Custom Tailoring
-                <span>↗</span>
+            <a href="#categories" class="btn btn-outline">
+                EXPLORE COLLECTION
             </a>
 
         </div>
 
 
-        <div class="hero-bottom">
+        <div class="hero-trust">
 
-            <div>
-
-                <strong>
-                    25+
-                </strong>
-
-                <span>
-                    Designs
-                </span>
-
+            <div class="trust-item">
+                <div class="trust-circle">✓</div>
+                <div>
+                    <strong>100% AUTHENTIC</strong>
+                    <small>Premium Quality</small>
+                </div>
             </div>
 
-
-            <div>
-
-                <strong>
-                    100%
-                </strong>
-
-                <span>
-                    Deshi Style
-                </span>
-
+            <div class="trust-item">
+                <div class="trust-circle">🚚</div>
+                <div>
+                    <strong>FAST DELIVERY</strong>
+                    <small>All Over Bangladesh</small>
+                </div>
             </div>
 
-
-            <div>
-
-                <strong>
-                    ♥
-                </strong>
-
-                <span>
-                    Handmade Care
-                </span>
-
+            <div class="trust-item">
+                <div class="trust-circle">▣</div>
+                <div>
+                    <strong>SAFE PAYMENT</strong>
+                    <small>Secure & Reliable</small>
+                </div>
             </div>
 
         </div>
 
     </div>
 
+    <div class="slider-arrow arrow-right">›</div>
+
+    <div class="slider-dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</section>
 
 
-    <!-- HERO IMAGE -->
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
 
-    <div class="hero-right">
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=300&q=80">
+        <p>OUD</p>
+    </div>
 
-        <div class="hero-bg-shape"></div>
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1582791694770-c9e04b3162f5?auto=format&fit=crop&w=300&q=80">
+        <p>ROSE</p>
+    </div>
+
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=300&q=80">
+        <p>MUSK</p>
+    </div>
+
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=300&q=80">
+        <p>SANDAL</p>
+    </div>
+
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=300&q=80">
+        <p>ISLAMIC COLLECTION</p>
+    </div>
+
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=300&q=80">
+        <p>GIFT SET</p>
+    </div>
+
+    <div class="category">
+        <img class="category-img"
+             src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=300&q=80">
+        <p>NEW ARRIVALS</p>
+    </div>
+
+</section>
 
 
-        <div class="hero-main-image">
+<!-- BEST SELLERS -->
+<section class="section section-dark" id="products">
 
-            <img
-                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1000&q=90"
-                alt="Premium Deshi Three Piece"
-            >
+    <div class="section-title">
+
+        <div class="title-left">
+            <div class="title-line"></div>
+            <h2>BEST SELLERS</h2>
+        </div>
+
+        <a href="#" class="view-all">VIEW ALL</a>
+
+    </div>
+
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Oud Al Arab</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(128)</span>
+                </div>
+
+                <div class="price">
+                    <strong>৳850</strong>
+                    <span class="old-price">৳1,200</span>
+                </div>
+
+                <div class="product-actions">
+                    <button onclick="addCart('Oud Al Arab',850,'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('Oud Al Arab',850)">
+                        BUY NOW
+                    </button>
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="hero-small-card">
+        <!-- PRODUCT 2 -->
+        <div class="product">
 
-            <div class="small-card-image">
+            <div class="product-img">
 
-                <img
-                    src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=300&q=80"
-                    alt="Deshi Collection"
-                >
+                <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
 
             </div>
 
-            <div>
+            <div class="product-info">
 
-                <small>
-                    FEATURED
-                </small>
+                <h3>Royal Musk</h3>
 
-                <strong>
-                    Deshi Collection
-                </strong>
+                <div class="rating">
+                    ★★★★★ <span>(96)</span>
+                </div>
 
-                <span>
-                    From ৳850
-                </span>
+                <div class="price">
+                    <strong>৳750</strong>
+                    <span class="old-price">৳1,050</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button onclick="addCart('Royal Musk',750,'https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('Royal Musk',750)">
+                        BUY NOW
+                    </button>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <div class="hero-round-text">
+        <!-- PRODUCT 3 -->
+        <div class="product">
 
-            <span>
-                ANJONA
-                •
-                DESHI
-                •
-                STYLE
-                •
-            </span>
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Mukhallat Al Khas</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(88)</span>
+                </div>
+
+                <div class="price">
+                    <strong>৳950</strong>
+                    <span class="old-price">৳1,300</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button onclick="addCart('Mukhallat Al Khas',950,'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('Mukhallat Al Khas',950)">
+                        BUY NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6f?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Rose Oudh</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(76)</span>
+                </div>
+
+                <div class="price">
+                    <strong>৳650</strong>
+                    <span class="old-price">৳990</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button onclick="addCart('Rose Oudh',650,'https://images.unsplash.com/photo-1595425970377-c9703cf48b6f?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('Rose Oudh',650)">
+                        BUY NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Sandal Supreme</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(64)</span>
+                </div>
+
+                <div class="price">
+                    <strong>৳700</strong>
+                    <span class="old-price">৳950</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button onclick="addCart('Sandal Supreme',700,'https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('Sandal Supreme',700)">
+                        BUY NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+        <div class="product">
+
+            <div class="product-img">
+
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=85">
+
+                <div class="wishlist" onclick="addWish(this)">♡</div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>White Musk</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(54)</span>
+                </div>
+
+                <div class="price">
+                    <strong>৳600</strong>
+                    <span class="old-price">৳850</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button onclick="addCart('White Musk',600,'https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=300&q=80')">
+                        ADD TO CART
+                    </button>
+
+                    <button onclick="buyNow('White Musk',600)">
+                        BUY NOW
+                    </button>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -434,1047 +1636,229 @@
 </section>
 
 
+<!-- PROMOS -->
+<section class="promos" id="offers">
 
-<!-- =====================================================
-     CATEGORY STRIP
-===================================================== -->
+    <div class="promo promo-1">
 
-<section class="category-strip">
+        <div class="promo-content">
 
-    <div class="category-item">
+            <h3>RAMADAN<br>COLLECTION</h3>
 
-        <span>
-            ✦
-        </span>
+            <p>
+                Special Discount<br>
+                <strong>UP TO 30% OFF</strong>
+            </p>
 
-        <strong>
-            দেশি থ্রি-পিস
-        </strong>
+            <a href="#products">SHOP NOW</a>
 
-    </div>
-
-
-    <div class="category-item">
-
-        <span>
-            ✦
-        </span>
-
-        <strong>
-            Cotton Collection
-        </strong>
+        </div>
 
     </div>
 
 
-    <div class="category-item">
+    <div class="promo promo-2">
 
-        <span>
-            ✦
-        </span>
+        <div class="promo-content">
 
-        <strong>
-            Party Wear
-        </strong>
+            <h3>PREMIUM<br>OUD COLLECTION</h3>
 
-    </div>
+            <p>
+                Luxury That<br>
+                Lasts Longer
+            </p>
 
+            <a href="#products">EXPLORE NOW</a>
 
-    <div class="category-item">
-
-        <span>
-            ✦
-        </span>
-
-        <strong>
-            Custom Tailoring
-        </strong>
+        </div>
 
     </div>
 
 
-    <div class="category-item">
+    <div class="promo promo-3">
 
-        <span>
-            ✦
-        </span>
+        <div class="promo-content">
 
-        <strong>
-            New Arrival
-        </strong>
+            <h3>SPECIAL<br>GIFT SET</h3>
+
+            <p>
+                Perfect Gift For Your<br>
+                Loved Ones
+            </p>
+
+            <a href="#products">SHOP NOW</a>
+
+        </div>
 
     </div>
 
 </section>
 
 
+<!-- BENEFITS -->
+<section class="benefits">
 
-<!-- =====================================================
-     SHOP SECTION
-===================================================== -->
+    <div class="benefit">
 
-<section
-    class="shop"
-    id="shop"
->
-
-
-    <div class="section-heading">
+        <div class="benefit-icon">✦</div>
 
         <div>
-
-            <span>
-                CURATED FOR YOU
-            </span>
-
-            <h2>
-                Shop Our Collection
-            </h2>
-
+            <h4>100% AUTHENTIC</h4>
+            <p>Original & premium quality.</p>
         </div>
 
-
-        <a href="#threepiece">
-            View All Collection →
-        </a>
-
     </div>
 
 
+    <div class="benefit">
 
-    <!-- FILTER -->
-
-    <div class="shop-filter">
-
-        <button
-            class="filter active"
-            data-filter="all"
-        >
-            All
-        </button>
-
-        <button
-            class="filter"
-            data-filter="cotton"
-        >
-            Cotton
-        </button>
-
-        <button
-            class="filter"
-            data-filter="deshi"
-        >
-            Deshi
-        </button>
-
-        <button
-            class="filter"
-            data-filter="party"
-        >
-            Party Wear
-        </button>
-
-        <button
-            class="filter"
-            data-filter="new"
-        >
-            New Arrival
-        </button>
-
-    </div>
-
-
-
-    <!-- PRODUCTS -->
-
-    <div
-        class="products"
-        id="productGrid"
-    >
-
-
-        <!-- PRODUCT -->
-
-        <article
-            class="product"
-            data-category="deshi"
-            data-name="Deshi Cotton Three Piece"
-            data-price="850"
-        >
-
-            <div class="product-photo">
-
-                <span class="product-tag">
-                    BEST SELLER
-                </span>
-
-
-                <button
-                    class="wishlist"
-                >
-                    ♡
-                </button>
-
-
-                <img
-                    src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=90"
-                    alt="Deshi Cotton Three Piece"
-                    loading="lazy"
-                >
-
-
-                <div class="quick-view">
-                    Quick View
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div class="product-category">
-                    DESHI COLLECTION
-                </div>
-
-                <h3>
-                    Deshi Cotton Three Piece
-                </h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>
-                        4.9
-                    </span>
-                </div>
-
-                <div class="product-price">
-
-                    <strong>
-                        ৳850
-                    </strong>
-
-                    <del>
-                        ৳1,000
-                    </del>
-
-                </div>
-
-
-                <button
-                    class="add-cart"
-                    data-name="Deshi Cotton Three Piece"
-                    data-price="850"
-                >
-                    Add to Cart
-                    <span>+</span>
-                </button>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT -->
-
-        <article
-            class="product"
-            data-category="cotton"
-            data-name="Premium Cotton Three Piece"
-            data-price="950"
-        >
-
-            <div class="product-photo">
-
-                <span class="product-tag new">
-                    NEW
-                </span>
-
-                <button class="wishlist">
-                    ♡
-                </button>
-
-                <img
-                    src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=90"
-                    alt="Premium Cotton Three Piece"
-                    loading="lazy"
-                >
-
-                <div class="quick-view">
-                    Quick View
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div class="product-category">
-                    COTTON COLLECTION
-                </div>
-
-                <h3>
-                    Premium Cotton Three Piece
-                </h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>
-                        4.8
-                    </span>
-                </div>
-
-                <div class="product-price">
-
-                    <strong>
-                        ৳950
-                    </strong>
-
-                    <del>
-                        ৳1,150
-                    </del>
-
-                </div>
-
-
-                <button
-                    class="add-cart"
-                    data-name="Premium Cotton Three Piece"
-                    data-price="950"
-                >
-                    Add to Cart
-                    <span>+</span>
-                </button>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT -->
-
-        <article
-            class="product"
-            data-category="party"
-            data-name="Elegant Party Three Piece"
-            data-price="1250"
-        >
-
-            <div class="product-photo">
-
-                <span class="product-tag">
-                    -10%
-                </span>
-
-                <button class="wishlist">
-                    ♡
-                </button>
-
-                <img
-                    src="https://images.unsplash.com/photo-1597983073493-88cd35cf93e8?auto=format&fit=crop&w=700&q=90"
-                    alt="Elegant Party Three Piece"
-                    loading="lazy"
-                >
-
-                <div class="quick-view">
-                    Quick View
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div class="product-category">
-                    PARTY WEAR
-                </div>
-
-                <h3>
-                    Elegant Party Three Piece
-                </h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>
-                        5.0
-                    </span>
-                </div>
-
-                <div class="product-price">
-
-                    <strong>
-                        ৳1,250
-                    </strong>
-
-                    <del>
-                        ৳1,400
-                    </del>
-
-                </div>
-
-
-                <button
-                    class="add-cart"
-                    data-name="Elegant Party Three Piece"
-                    data-price="1250"
-                >
-                    Add to Cart
-                    <span>+</span>
-                </button>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUCT -->
-
-        <article
-            class="product"
-            data-category="new"
-            data-name="Modern Deshi Collection"
-            data-price="1100"
-        >
-
-            <div class="product-photo">
-
-                <span class="product-tag new">
-                    NEW ARRIVAL
-                </span>
-
-                <button class="wishlist">
-                    ♡
-                </button>
-
-                <img
-                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=90"
-                    alt="Modern Deshi Collection"
-                    loading="lazy"
-                >
-
-                <div class="quick-view">
-                    Quick View
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div class="product-category">
-                    NEW COLLECTION
-                </div>
-
-                <h3>
-                    Modern Deshi Collection
-                </h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>
-                        4.9
-                    </span>
-                </div>
-
-                <div class="product-price">
-
-                    <strong>
-                        ৳1,100
-                    </strong>
-
-                    <del>
-                        ৳1,300
-                    </del>
-
-                </div>
-
-
-                <button
-                    class="add-cart"
-                    data-name="Modern Deshi Collection"
-                    data-price="1100"
-                >
-                    Add to Cart
-                    <span>+</span>
-                </button>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FEATURE BANNER
-===================================================== -->
-
-<section class="feature-banner">
-
-
-    <div class="feature-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=90"
-            alt="Anjona Deshi Fashion"
-            loading="lazy"
-        >
-
-    </div>
-
-
-    <div class="feature-content">
-
-        <span>
-            THE ANJONA EDIT
-        </span>
-
-        <h2>
-            Simple.
-            <br>
-            Elegant.
-            <br>
-            Deshi.
-        </h2>
-
-        <p>
-            দেশি কাপড়ের সৌন্দর্যকে আধুনিক
-            ডিজাইনের সাথে মিলিয়ে তৈরি আমাদের
-            বিশেষ কালেকশন।
-        </p>
-
-        <a
-            href="#shop"
-            class="dark-btn"
-        >
-            Discover More →
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     THREE PIECE
-===================================================== -->
-
-<section
-    class="three-piece"
-    id="threepiece"
->
-
-
-    <div class="section-heading centered">
-
-        <span>
-            DESHI FASHION
-        </span>
-
-        <h2>
-            Three Piece Collection
-        </h2>
-
-        <p>
-            প্রতিদিনের আরাম থেকে বিশেষ অনুষ্ঠানের
-            জন্য—আপনার জন্য বেছে নেওয়া দেশি কালেকশন।
-        </p>
-
-    </div>
-
-
-    <div class="three-grid">
-
-
-        <div class="three-card large">
-
-            <img
-                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=90"
-                alt="Everyday Collection"
-                loading="lazy"
-            >
-
-            <div class="three-overlay">
-
-                <span>
-                    01
-                </span>
-
-                <h3>
-                    Everyday Deshi
-                </h3>
-
-                <a href="#shop">
-                    Shop Collection →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="three-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=90"
-                alt="Modern Collection"
-                loading="lazy"
-            >
-
-            <div class="three-overlay">
-
-                <span>
-                    02
-                </span>
-
-                <h3>
-                    Modern Deshi
-                </h3>
-
-                <a href="#shop">
-                    Explore →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="three-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=90"
-                alt="Party Wear"
-                loading="lazy"
-            >
-
-            <div class="three-overlay">
-
-                <span>
-                    03
-                </span>
-
-                <h3>
-                    Party Wear
-                </h3>
-
-                <a href="#shop">
-                    Explore →
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CUSTOM TAILORING
-===================================================== -->
-
-<section
-    class="custom"
-    id="custom"
->
-
-
-    <div class="custom-content">
-
-        <span>
-            MADE FOR YOU
-        </span>
-
-        <h2>
-            আপনার ডিজাইন।
-            <br>
-            আপনার মাপ।
-            <br>
-            <em>আপনার Anjona.</em>
-        </h2>
-
-        <p>
-            আপনার পছন্দের ছবি বা ডিজাইন পাঠান।
-            কাপড়, রঙ ও মাপ অনুযায়ী
-            কাস্টম পোশাক তৈরি করা যাবে।
-        </p>
-
-
-        <div class="custom-points">
-
-            <div>
-                ✓ Custom Measurement
-            </div>
-
-            <div>
-                ✓ Custom Design
-            </div>
-
-            <div>
-                ✓ Deshi Fabric
-            </div>
-
-        </div>
-
-
-        <a
-            href="#order"
-            class="dark-btn"
-        >
-            Custom Order করুন →
-        </a>
-
-    </div>
-
-
-    <div class="custom-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=90"
-            alt="Custom Tailoring"
-            loading="lazy"
-        >
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     NEW ARRIVAL
-===================================================== -->
-
-<section
-    class="new-arrival"
-    id="new"
->
-
-
-    <div class="section-heading">
+        <div class="benefit-icon">🚚</div>
 
         <div>
-
-            <span>
-                JUST IN
-            </span>
-
-            <h2>
-                New Arrivals
-            </h2>
-
+            <h4>FAST DELIVERY</h4>
+            <p>Get your order quickly.</p>
         </div>
-
-        <a href="#shop">
-            Shop All →
-        </a>
 
     </div>
 
 
-    <div class="arrival-grid">
+    <div class="benefit">
 
+        <div class="benefit-icon">✓</div>
 
-        <div class="arrival-card">
-
-            <div>
-
-                <span>
-                    NEW
-                </span>
-
-                <h3>
-                    Soft Cotton
-                </h3>
-
-                <p>
-                    ৳890
-                </p>
-
-            </div>
-
-            <img
-                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=600&q=85"
-                alt="Soft Cotton"
-                loading="lazy"
-            >
-
+        <div>
+            <h4>SECURE PAYMENT</h4>
+            <p>100% secure payment.</p>
         </div>
 
+    </div>
 
-        <div class="arrival-card">
 
-            <div>
+    <div class="benefit">
 
-                <span>
-                    NEW
-                </span>
+        <div class="benefit-icon">↻</div>
 
-                <h3>
-                    Deshi Print
-                </h3>
-
-                <p>
-                    ৳980
-                </p>
-
-            </div>
-
-            <img
-                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=85"
-                alt="Deshi Print"
-                loading="lazy"
-            >
-
+        <div>
+            <h4>EASY RETURNS</h4>
+            <p>Hassle free return.</p>
         </div>
 
+    </div>
 
-        <div class="arrival-card">
 
-            <div>
+    <div class="benefit">
 
-                <span>
-                    LIMITED
-                </span>
+        <div class="benefit-icon">☎</div>
 
-                <h3>
-                    Elegant Party
-                </h3>
-
-                <p>
-                    ৳1,290
-                </p>
-
-            </div>
-
-            <img
-                src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=600&q=85"
-                alt="Elegant Party"
-                loading="lazy"
-            >
-
+        <div>
+            <h4>CUSTOMER SUPPORT</h4>
+            <p>We're here to help.</p>
         </div>
-
 
     </div>
 
 </section>
 
 
+<!-- REVIEWS -->
+<section class="reviews" id="about">
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+    <div class="section-title">
 
-<section
-    class="about"
-    id="about"
->
-
-
-    <div class="about-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=90"
-            alt="Anjona Ladies Tailors"
-            loading="lazy"
-        >
+        <div class="title-left">
+            <div class="title-line"></div>
+            <h2>CUSTOMER REVIEWS</h2>
+        </div>
 
     </div>
 
 
-    <div class="about-content">
+    <div class="review-grid">
 
-        <span>
-            OUR STORY
-        </span>
+        <div class="review">
 
-        <h2>
-            দেশি ফ্যাশনকে
-            <br>
-            ভালোবাসা থেকেই
-            <em>Anjona.</em>
-        </h2>
+            <div class="quote">“</div>
 
-        <p>
-            Anjona Ladies Tailors-এর লক্ষ্য হলো
-            দেশি পোশাককে আরও সুন্দর, আধুনিক
-            এবং ব্যক্তিগত করে তোলা।
-        </p>
+            <p>
+                সুবাস সত্যিই অসাধারণ। প্যাকেজিং খুব সুন্দর
+                এবং আতর অনেকক্ষণ পর্যন্ত থাকে।
+            </p>
 
-        <p>
-            আপনার পছন্দের কাপড়, ডিজাইন এবং
-            মাপকে গুরুত্ব দিয়ে প্রতিটি অর্ডার
-            যত্নসহকারে তৈরি করা হয়।
-        </p>
+            <div class="review-stars">
+                ★★★★★
+                <span class="review-name">— Mahmud Hasan</span>
+            </div>
 
-        <a
-            href="#contact"
-            class="text-btn"
-        >
-            Learn More →
-        </a>
+        </div>
+
+
+        <div class="review">
+
+            <div class="quote">“</div>
+
+            <p>
+                Best attar shop in Bangladesh!
+                Original product and long lasting fragrance.
+            </p>
+
+            <div class="review-stars">
+                ★★★★★
+                <span class="review-name">— Jannatul Ferdous</span>
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="quote">“</div>
+
+            <p>
+                Oud Al Arab আমার খুব পছন্দের একটি আতর।
+                সুবাসটা বেশ classy এবং premium.
+            </p>
+
+            <div class="review-stars">
+                ★★★★★
+                <span class="review-name">— Abdur Rahman</span>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
+<!-- NEWSLETTER -->
+<section class="newsletter">
 
-<!-- =====================================================
-     ORDER
-===================================================== -->
+    <div class="newsletter-left">
 
-<section
-    class="order"
-    id="order"
->
+        <div class="mail-icon">✉</div>
 
-
-    <div class="order-heading">
-
-        <span>
-            ORDER NOW
-        </span>
-
-        <h2>
-            আপনার পছন্দের পোশাক
-            অর্ডার করুন
-        </h2>
-
-        <p>
-            নিচের তথ্য দিন। আমরা WhatsApp-এর
-            মাধ্যমে আপনার সাথে যোগাযোগ করব।
-        </p>
+        <div>
+            <h3>STAY UPDATED</h3>
+            <p>
+                Subscribe to get special offers, free giveaways
+                and new collection updates.
+            </p>
+        </div>
 
     </div>
 
 
-    <form
-        class="order-form"
-        id="orderForm"
-    >
+    <form class="newsletter-form" onsubmit="subscribe(event)">
 
-
-        <div class="input-group">
-
-            <label>
-                আপনার নাম
-            </label>
-
-            <input
-                type="text"
-                id="customerName"
-                placeholder="আপনার নাম"
-                required
-            >
-
-        </div>
-
-
-        <div class="input-group">
-
-            <label>
-                মোবাইল নম্বর
-            </label>
-
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="01XXXXXXXXX"
-                required
-            >
-
-        </div>
-
-
-        <div class="input-group">
-
-            <label>
-                পণ্য
-            </label>
-
-            <select
-                id="productName"
-                required
-            >
-
-                <option value="">
-                    পণ্য নির্বাচন করুন
-                </option>
-
-                <option>
-                    Deshi Cotton Three Piece
-                </option>
-
-                <option>
-                    Premium Cotton Three Piece
-                </option>
-
-                <option>
-                    Elegant Party Three Piece
-                </option>
-
-                <option>
-                    Modern Deshi Collection
-                </option>
-
-                <option>
-                    Custom Tailoring
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <div class="input-group">
-
-            <label>
-                Quantity
-            </label>
-
-            <input
-                type="number"
-                id="quantity"
-                min="1"
-                value="1"
-            >
-
-        </div>
-
-
-        <div class="input-group full">
-
-            <label>
-                অতিরিক্ত তথ্য
-            </label>
-
-            <textarea
-                id="orderMessage"
-                placeholder="রঙ, সাইজ, ডিজাইন বা অন্য কোনো তথ্য..."
-            ></textarea>
-
-        </div>
-
-
-        <button
-            type="submit"
-            class="submit-btn"
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
         >
-            WhatsApp-এ অর্ডার পাঠান
-            →
+
+        <button type="submit">
+            SUBSCRIBE
         </button>
 
     </form>
@@ -1482,230 +1866,66 @@
 </section>
 
 
+<!-- FOOTER -->
+<footer id="contact">
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-    class="contact"
-    id="contact"
->
-
-    <div>
-
-        <span>
-            GET IN TOUCH
-        </span>
-
-        <h2>
-            Let's Talk About
-            <em>Your Style.</em>
-        </h2>
-
-        <p>
-            অর্ডার, ডিজাইন বা কাস্টম সেলাই নিয়ে
-            কথা বলতে আমাদের সাথে যোগাযোগ করুন।
-        </p>
-
-    </div>
-
-
-    <div class="contact-actions">
-
-        <a
-            href="https://wa.me/8801717503093"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            WhatsApp
-            ↗
-        </a>
-
-
-        <a
-            href="tel:+8801717503093"
-        >
-            01717-503093
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CART DRAWER
-===================================================== -->
-
-<div
-    class="cart-overlay"
-    id="cartOverlay"
-></div>
-
-
-<aside
-    class="cart-drawer"
-    id="cartDrawer"
->
-
-    <div class="cart-top">
-
-        <h2>
-            Your Cart
-        </h2>
-
-        <button
-            id="closeCart"
-        >
-            ✕
-        </button>
-
-    </div>
-
-
-    <div
-        id="cartItems"
-        class="cart-items"
-    >
-
-        <div class="empty-cart">
-            আপনার Cart খালি।
-        </div>
-
-    </div>
-
-
-    <div class="cart-bottom">
-
-        <div>
-
-            <span>
-                Total
-            </span>
-
-            <strong id="cartTotal">
-                ৳0
-            </strong>
-
-        </div>
-
-
-        <a
-            href="#order"
-            id="checkoutBtn"
-        >
-            Checkout →
-        </a>
-
-    </div>
-
-</aside>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="footer-main">
-
+    <div class="footer-grid">
 
         <div class="footer-brand">
 
-            <div class="brand-text">
+            <a href="#" class="logo">
 
-                <strong>
-                    ANJONA
-                </strong>
+                <div class="logo-icon">✦</div>
 
-                <span>
-                    LADIES TAILORS
-                </span>
+                <div class="logo-text">
+                    <strong>ATTAR</strong>
+                    <small>SHOP</small>
+                </div>
 
-            </div>
-
+            </a>
 
             <p>
-                দেশি কাপড়।
-                আধুনিক স্টাইল।
-                আপনার নিজস্ব সৌন্দর্য।
+                Premium quality attar collection.
+                আপনার পছন্দের সুবাস এখন আপনার হাতের কাছে।
+                বাংলাদেশের যেকোনো প্রান্তে দ্রুত ডেলিভারি।
             </p>
 
         </div>
 
 
+        <div class="footer">
 
-        <div class="footer-column">
+            <h4>QUICK LINKS</h4>
 
-            <h3>
-                Shop
-            </h3>
-
-            <a href="#shop">
-                All Products
-            </a>
-
-            <a href="#threepiece">
-                Three Piece
-            </a>
-
-            <a href="#new">
-                New Arrival
-            </a>
-
-            <a href="#custom">
-                Custom Tailoring
-            </a>
+            <a href="#">Home</a>
+            <a href="#products">All Attar</a>
+            <a href="#products">Best Sellers</a>
+            <a href="#offers">Offers</a>
 
         </div>
 
 
+        <div class="footer">
 
-        <div class="footer-column">
+            <h4>CUSTOMER CARE</h4>
 
-            <h3>
-                Help
-            </h3>
-
-            <a href="#order">
-                How to Order
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-            <a href="#about">
-                About Us
-            </a>
+            <a href="#">My Account</a>
+            <a href="#">Track Order</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
 
         </div>
 
 
+        <div class="footer">
 
-        <div class="footer-column">
+            <h4>CONTACT US</h4>
 
-            <h3>
-                Contact
-            </h3>
-
-            <a href="tel:+8801717503093">
-                01717-503093
-            </a>
-
-            <a
-                href="https://wa.me/8801717503093"
-                target="_blank"
-            >
-                WhatsApp
-            </a>
+            <a href="#">☎ +880 1234-567890</a>
+            <a href="#">✉ hello@attarshop.com</a>
+            <a href="#">📍 Sylhet, Bangladesh</a>
 
         </div>
-
 
     </div>
 
@@ -1713,11 +1933,11 @@
     <div class="footer-bottom">
 
         <span>
-            © 2026 Anjona Ladies Tailors
+            © 2026 ATTAR SHOP. All Rights Reserved.
         </span>
 
         <span>
-            Made for Deshi Fashion ♥
+            Premium Fragrance • Authentic Attar • Bangladesh
         </span>
 
     </div>
@@ -1725,13 +1945,363 @@
 </footer>
 
 
+<!-- CART -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
 
-<!-- =====================================================
-     SCRIPT
-===================================================== -->
+<div class="cart-panel" id="cartPanel">
 
-<script src="script.js"></script>
+    <div class="cart-header">
 
+        <h3>Your Cart</h3>
+
+        <span class="close-cart" onclick="closeCart()">×</span>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <p style="color:#888;font-size:12px;margin-top:20px;">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ৳0
+            </strong>
+
+        </div>
+
+        <button class="checkout" onclick="checkout()">
+            PROCEED TO CHECKOUT
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+    Product added to cart ✓
+</div>
+
+
+<script>
+
+let cart = [];
+
+let wishlistCount = 0;
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("show");
+
+}
+
+
+/* ================= CART ================= */
+
+function addCart(name, price, image){
+
+    cart.push({
+        name:name,
+        price:price,
+        image:image
+    });
+
+    updateCart();
+
+    showToast(name + " added to cart ✓");
+
+}
+
+
+function updateCart(){
+
+    const count =
+        document.getElementById("cartCount");
+
+    const items =
+        document.getElementById("cartItems");
+
+    const total =
+        document.getElementById("cartTotal");
+
+
+    count.textContent = cart.length;
+
+
+    if(cart.length === 0){
+
+        items.innerHTML = `
+            <p style="color:#888;font-size:12px;margin-top:20px;">
+                Your cart is empty.
+            </p>
+        `;
+
+        total.textContent = "৳0";
+
+        return;
+
+    }
+
+
+    let totalPrice = 0;
+
+
+    items.innerHTML = cart.map((item,index)=>{
+
+        totalPrice += item.price;
+
+        return `
+
+            <div class="cart-item">
+
+                <img src="${item.image}">
+
+                <div style="flex:1">
+
+                    <h4>${item.name}</h4>
+
+                    <p>৳${item.price}</p>
+
+                    <button
+                        onclick="removeCart(${index})"
+                        style="
+                        background:none;
+                        border:none;
+                        color:#999;
+                        font-size:9px;
+                        margin-top:7px;
+                        cursor:pointer;
+                        "
+                    >
+                        REMOVE
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }).join("");
+
+
+    total.textContent =
+        "৳" + totalPrice.toLocaleString();
+
+}
+
+
+function removeCart(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+
+function openCart(){
+
+    document
+        .getElementById("cartPanel")
+        .classList.add("open");
+
+    document
+        .getElementById("overlay")
+        .classList.add("show");
+
+}
+
+
+function closeCart(){
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("open");
+
+    document
+        .getElementById("overlay")
+        .classList.remove("show");
+
+}
+
+
+/* ================= BUY NOW ================= */
+
+function buyNow(name,price){
+
+    addCart(
+        name,
+        price,
+        "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=300&q=80"
+    );
+
+    openCart();
+
+}
+
+
+/* ================= WISHLIST ================= */
+
+function addWish(element){
+
+    if(element.classList.contains("liked")){
+
+        element.classList.remove("liked");
+
+        element.textContent = "♡";
+
+        wishlistCount--;
+
+    }else{
+
+        element.classList.add("liked");
+
+        element.textContent = "♥";
+
+        wishlistCount++;
+
+    }
+
+    document
+        .getElementById("wishCount")
+        .textContent = wishlistCount;
+
+}
+
+
+/* ================= CHECKOUT ================= */
+
+function checkout(){
+
+    if(cart.length === 0){
+
+        showToast("Your cart is empty!");
+
+        return;
+
+    }
+
+    showToast("Checkout page coming soon ✓");
+
+}
+
+
+/* ================= NEWSLETTER ================= */
+
+function subscribe(event){
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("email").value;
+
+    if(email){
+
+        showToast("Thanks for subscribing ✓");
+
+        document
+            .getElementById("email")
+            .value = "";
+
+    }
+
+}
+
+
+/* ================= TOAST ================= */
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },2500);
+
+}
+
+
+/* ================= CLOSE MOBILE MENU ================= */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document
+            .getElementById("navLinks")
+            .classList.remove("show");
+
+    });
+
+});
+
+
+/* ================= SIMPLE HERO DOT ================= */
+
+const dots =
+    document.querySelectorAll(".slider-dots span");
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        dots.forEach(d =>
+            d.classList.remove("active")
+        );
+
+        dot.classList.add("active");
+
+    });
+
+});
+
+
+/* ================= HERO ARROWS ================= */
+
+document
+    .querySelector(".arrow-left")
+    .addEventListener("click",()=>{
+
+        showToast("Previous collection");
+
+    });
+
+
+document
+    .querySelector(".arrow-right")
+    .addEventListener("click",()=>{
+
+        showToast("Next collection");
+
+    });
+
+</script>
 
 </body>
 </html>
